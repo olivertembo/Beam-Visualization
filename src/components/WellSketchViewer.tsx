@@ -1,15 +1,25 @@
 import { Casing } from './elements';
 
+interface Element {
+  shape: string;
+}
 interface Props {
-  elements: string[];
+  data: Element[];
+  depthFrom: number;
+  depthTo: number;
+  widthFrom: number;
+  widthTo: number;
+  onDepthChange: Function;
+  onWidthChange: Function;
+  onError: Function;
 }
 
-const WellSketchViewer = ({ elements }: Props) => {
+const WellSketchViewer = ({ data }: Props) => {
   return (
     <div>
       <h1>Well sketch</h1>
-      {elements.map((element, index) => {
-        switch (element) {
+      {data.map((element, index) => {
+        switch (element.shape) {
           case 'casing':
             return <Casing key={`${element}${index}`} />;
           default:

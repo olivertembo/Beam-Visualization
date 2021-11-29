@@ -11,12 +11,24 @@ const Template: ComponentStory<typeof WellSketchViewer> = (args) => (
   <WellSketchViewer {...args} />
 );
 
+const elementProps = {
+  depthFrom: 0,
+  depthTo: 0,
+  widthFrom: 0,
+  widthTo: 0,
+  onDepthChange: () => {},
+  onWidthChange: () => {},
+  onError: () => {},
+};
+
 export const Casing = Template.bind({});
 Casing.args = {
-  elements: ['casing'],
+  data: [{ shape: 'casing' }],
+  ...elementProps,
 };
 
 export const Liner = Template.bind({});
 Liner.args = {
-  elements: ['liner'],
+  data: [{ shape: 'liner' }],
+  ...elementProps,
 };
