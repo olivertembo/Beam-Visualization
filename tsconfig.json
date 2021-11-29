@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "lib": [
+      "es2017"
+    ],
+    "moduleResolution": "node",
+    "module": "es6",
+    "noEmit": false,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    // Solves https://github.com/DefinitelyTyped/DefinitelyTyped/issues/16825
+    "skipLibCheck": true,
+    "target": "es5"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "types"],
+  "exclude": ["node_modules"]
+}
