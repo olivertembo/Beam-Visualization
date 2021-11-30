@@ -1,10 +1,7 @@
-import { Casing } from './elements';
+import { Casing, WellSketchPiece } from './elements';
 
-interface Element {
-  shape: string;
-}
 interface Props {
-  data: Element[];
+  data: WellSketchPiece[];
   depthFrom: number;
   depthTo: number;
   widthFrom: number;
