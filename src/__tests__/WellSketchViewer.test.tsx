@@ -4,16 +4,8 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { WellSketchViewer } from '..';
+import wellSketchProps from '../mocks/wellSketch1';
 
-const wellSketchProps = {
-  depthFrom: 0,
-  depthTo: 0,
-  widthFrom: 0,
-  widthTo: 0,
-  onDepthChange: () => {},
-  onWidthChange: () => {},
-  onError: () => {},
-};
 const elementProps = {
   top: 0,
   bottom: 0,
@@ -34,11 +26,6 @@ const elementProps = {
 };
 
 test('renders well sketch', () => {
-  const { getByText } = render(
-    <WellSketchViewer
-      data={[{ ...elementProps, shape: 'casing', title: 'Casing title' }]}
-      {...wellSketchProps}
-    />
-  );
+  const { getByText } = render(<WellSketchViewer {...wellSketchProps} />);
   expect(getByText('casing shape')).toBeInTheDocument();
 });

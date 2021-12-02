@@ -2,6 +2,7 @@ import { Casing, WellSketchPiece } from './elements';
 
 interface Props {
   data: WellSketchPiece[];
+  title: string;
   depthFrom: number;
   depthTo: number;
   widthFrom: number;
@@ -11,10 +12,10 @@ interface Props {
   onError: Function;
 }
 
-const WellSketchViewer = ({ data }: Props) => {
+const WellSketchViewer = ({ title, data }: Props) => {
   return (
     <div>
-      <h1>Well sketch</h1>
+      <h1>{title}</h1>
       {data.map((element, index) => {
         switch (element.shape) {
           case 'casing':
