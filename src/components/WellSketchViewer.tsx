@@ -14,13 +14,14 @@ interface Props {
 
 const WellSketchViewer = ({ title, data }: Props) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <svg width="100%" height="100%" viewBox="5 0 100 100">
+    <div style={{ backgroundColor: '#000000', padding: '20px', textAlign: 'center' }}>
+      <h1 style={{ color: "#fff" }}>{title}</h1>
+      <svg width="100%" height="100%" viewBox="0 0 300 300">
         {data.map((element, index) => {
+          
           switch (element.shape) {
             case 'casing':
-              return <Casing key={`${element}${index}`} />;
+              return <Casing element={element} key={`${element}${index}`} origin={{ x: 0, y: 0 }} />;
             case 'tubing':
               return <Tubing key={`${element}${index}`} index={index} />;
             default:

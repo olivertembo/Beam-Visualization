@@ -1,5 +1,6 @@
 export { default as Casing } from './Casing';
 export { default as Tubing } from './Tubing';
+export { default as Fish } from './Fish';
 
 export type WellSketchShape =
   | 'casing'
