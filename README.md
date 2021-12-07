@@ -1,4 +1,4 @@
-# spotlytt-components
+# WellBore-components
 
 spotLYTT well sketch components
 
