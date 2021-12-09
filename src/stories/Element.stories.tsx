@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Casing } from '../components/elements';
+import { Casing, Plug } from '../components/elements';
 
 export default {
   title: 'Elements/Casing',
@@ -10,3 +10,5 @@ export default {
 const Template: ComponentStory<typeof Casing> = () => <Casing />;
 
 export const Default = Template.bind({});
+export const withoutShoe = Template.bind({});
+export const withoutCrossOver = Template.bind({});
